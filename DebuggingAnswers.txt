@@ -1,0 +1,32 @@
+Put your answers to the debugging questions from Problem One in this file.
+
+Q1:
+finish : 'C'
+numDisks: 5
+start : 'A'
+temp : 'B'
+totalMoves : 28672
+
+Q2:
+makeTheMagicHappen() called the solveTowersOfHanoi function and it was defined in the TowersOfHanoiGUI.cpp file.
+
+Q3:
+31 total moves
+
+Q4:
+15 total moves
+
+Q5:
+A 2 character input because the program starts to output strings that are longer than the original input.
+
+Q6:
+It shouldn't be += chosen but just +.
+
+Q7:
+If for example our first input is 'ad' and we keep += chosen, then chosen starts acting like the addition of a new character
+a option itself. So if we run the program through the debugger and we choose 'a', then once the program runs through permutationsRec
+they will add 'a' as chosen then run through again with '' as remaining and 'ad' as chosen. However, the program will run once more through
+with 'a' being remaining and 'ad' as chosen and output an unnecessary result causing the bug because the program thinks 'ad' as a whole
+is a character, not the following recursive case which causes another output of 'ada' in the end.Therefore, if we change += to +,
+then the program will recognize that the addition of 'd' is another recursive case and not add the extra 'ada' and treat it as an addition
+of a character rather than it being a character itself.
